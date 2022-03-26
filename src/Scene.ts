@@ -1,37 +1,42 @@
-import { AnimatedSprite, Container, Graphics, Texture, Text, NineSlicePlane } from "pixi.js";
+import {  Container, Texture, NineSlicePlane } from "pixi.js";
 import { Lokihat } from "./Lokihat";
+import { Estrellas } from "./Estrellas";
+
 
 export class Scene extends Container{
 
     constructor(){
         super();
 
+
+        const panelPlane = new NineSlicePlane(
+
+            Texture.from("panelLcd"),35,35,35,35
+
+        );
+        this.addChild(panelPlane);
+        panelPlane.width=500;
+        panelPlane.height=500;
+        const posRelX= panelPlane.position.x=400;
+        const posRelY= panelPlane.position.y=100;
+
+
         //class extending form container
         const lokiconfez: Lokihat =new Lokihat();
 		lokiconfez.scale.set(0.5);
-        lokiconfez.x=400;
-        lokiconfez.y=400;
+        lokiconfez.x=posRelX+10;
+        lokiconfez.y=posRelY+70;
         this.addChild(lokiconfez);
 
-        //animated sprite
-        const lokiAnimated: AnimatedSprite= new AnimatedSprite(
-            [
-                Texture.from("corre1"),
-                Texture.from("corre2"),
-                Texture.from("corre3"),
-                Texture.from("corre3"),
-                Texture.from("corre5"),
-                Texture.from("corre6"),
-                Texture.from("corre7"),
-                Texture.from("corre8")
-        ],true
-        ); 
-        lokiAnimated.play();
-        lokiAnimated.animationSpeed=0.2;
-        this.addChild(lokiAnimated);
-
+        //class extending form container
+        const estrellas: Estrellas =new Estrellas();
+		estrellas.scale.set(0.5);
+        estrellas.x=posRelX+200;
+        estrellas.y=posRelY+70;
+        this.addChild(estrellas);
+       
         //primit. grafica
-
+/*
         const myGraph:Graphics=new Graphics();
         myGraph.lineStyle({color:0xff55ff, width:10, alpha:1});
         myGraph.moveTo(0,0);
@@ -60,18 +65,9 @@ export class Scene extends Container{
         myText.scale.set(1);
         this.addChild(myText);
         
-        //nine slica plane
+        //nine slica plane*/
 
-        const panelPlane = new NineSlicePlane(
 
-            Texture.from("panelLcd"),35,35,35,35
-
-        );
-        this.addChild(panelPlane);
-        panelPlane.width=500;
-        panelPlane.height=500;
-        panelPlane.position.x=700;
-        panelPlane.position.y=100;
 
         
 
