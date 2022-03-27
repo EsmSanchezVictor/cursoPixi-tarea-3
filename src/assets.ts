@@ -11,7 +11,7 @@ export const asseets=[
     { url: "./panel/completo.png", name: "completoNivel" },
     { url: "./panel/mandos.png", name: "mandos" },
     { url: "./panel/puntos.png", name: "puntos" },
-    
+    { url: "./panel/contenedor.png", name: "contenedor" },
 //estrellas
 
     { url: "./estrellas/estrella.png", name: "estrella" },

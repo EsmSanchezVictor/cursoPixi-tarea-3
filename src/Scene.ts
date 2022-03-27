@@ -2,6 +2,8 @@ import {  Container, Texture, NineSlicePlane,Text } from "pixi.js";
 import { Lokihat } from "./Lokihat";
 import { Estrellas } from "./Estrellas";
 import { Nivel } from "./Nivel";
+import { Puntos } from "./Puntos";
+import { Mandos } from "./Mandos";
 
 export class Scene extends Container{
 
@@ -42,51 +44,38 @@ export class Scene extends Container{
         nivel.y=posRelY+150;
         this.addChild(nivel);
        
+         //panel de puntos
+        const puntos: Puntos =new Puntos();
+        puntos.scale.set(0.5);
+        puntos.x=posRelX-5;
+        puntos.y=posRelY+250;
+        this.addChild(puntos);
 
-        //primit. grafica
-/*
-        const myGraph:Graphics=new Graphics();
-        myGraph.lineStyle({color:0xff55ff, width:10, alpha:1});
-        myGraph.moveTo(0,0);
-        myGraph.lineTo(300,500);
-        myGraph.lineTo(300,100);
-        myGraph.lineTo(0,0);
+        //panel de puntos
+        const mandos: Mandos =new Mandos();
+        mandos.scale.set(0.3);
+        mandos.x=posRelX+45;
+        mandos.y=posRelY+355;
+        this.addChild(mandos);
 
-        myGraph.clear();
+  
+        //text
 
-        myGraph.lineStyle({color:0xff55ff, width:10, alpha:1});
-        myGraph.beginFill(0x00ff00,1);
-        myGraph.drawCircle(0,0,100);
-        myGraph.endFill()
-        myGraph.drawCircle(50,50,100);
-
-        myGraph.position.set(1280/2,720/2);
-        this.addChild(myGraph);
-
-       */ //text
-
-        const myText: Text= new Text("hello word",{fontSize: 20,fill:0x00c000, fontFamily:"Comic Sans MS"});
+        const myText: Text= new Text("¿Sólo una estrella y media?",{fontSize: 20,fill:0x00c000, fontFamily:"Comic Sans MS"});
         
-        myText.text="¿Sólo una estrella y media?"
         myText.position.x=610;
         myText.position.y=130;
-   
         myText.scale.set(1);
 
-        const myText1: Text= new Text("hello word",{fontSize: 20,fill:0x00e000, fontFamily:"Comic Sans MS"});
-        myText1.text="¡Mira como te mira Loki..!"
+        const myText1: Text= new Text("¡Mira como te mira Loki..!",{fontSize: 20,fill:0x00e000, fontFamily:"Comic Sans MS"});
+     
         myText1.position.x=615;
         myText1.position.y=250;
-   
         myText1.scale.set(1);
 
         this.addChild(myText);
         this.addChild(myText1);
         
-        //nine slica plane
-
-
-
         
 
     }
