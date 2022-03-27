@@ -61,13 +61,13 @@ export class Scene extends Container{
   
         //text
 
-        const myText: Text= new Text("¿Sólo una estrella y media?",{fontSize: 20,fill:0x00c000, fontFamily:"Comic Sans MS"});
+        const myText: Text= new Text("¿Solo una estrella y media?",{fontSize: 20,fill:0x00c000, fontFamily:"Comic Sans MS"});
         
         myText.position.x=610;
         myText.position.y=130;
         myText.scale.set(1);
 
-        const myText1: Text= new Text("¡Mira como te mira Loki..!",{fontSize: 20,fill:0x00e000, fontFamily:"Comic Sans MS"});
+        const myText1: Text= new Text("¡Mirá como te mira Loki..!",{fontSize: 20,fill:0x00e000, fontFamily:"Comic Sans MS"});
      
         myText1.position.x=615;
         myText1.position.y=250;
