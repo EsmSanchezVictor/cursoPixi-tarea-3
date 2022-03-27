@@ -14,8 +14,8 @@ export class Lokihat extends Container{
             
         this.addChild(loki); 
         this.addChild(fez); 
-        fez.toGlobal(new Point()); //el point lo convierte en coor globales-  gorro decime donde queda tu origen
-	fez.parent.toGlobal(fez.position);// padre de fez decime la posicion global del gorro
+        fez.toGlobal(new Point()); 
+	fez.parent.toGlobal(fez.position);
 	
     }
 
