@@ -1,7 +1,7 @@
-import {  Container, Texture, NineSlicePlane } from "pixi.js";
+import {  Container, Texture, NineSlicePlane,Text } from "pixi.js";
 import { Lokihat } from "./Lokihat";
 import { Estrellas } from "./Estrellas";
-
+import { Nivel } from "./Nivel";
 
 export class Scene extends Container{
 
@@ -21,20 +21,28 @@ export class Scene extends Container{
         const posRelY= panelPlane.position.y=100;
 
 
-        //class extending form container
+        //Loki con sobrero
         const lokiconfez: Lokihat =new Lokihat();
 		lokiconfez.scale.set(0.5);
         lokiconfez.x=posRelX+10;
         lokiconfez.y=posRelY+70;
         this.addChild(lokiconfez);
 
-        //class extending form container
+        //estrellas
         const estrellas: Estrellas =new Estrellas();
 		estrellas.scale.set(0.5);
         estrellas.x=posRelX+200;
         estrellas.y=posRelY+70;
         this.addChild(estrellas);
        
+        //panel de nivel
+        const nivel: Nivel =new Nivel();
+		nivel.scale.set(0.5);
+        nivel.x=posRelX+150;
+        nivel.y=posRelY+150;
+        this.addChild(nivel);
+       
+
         //primit. grafica
 /*
         const myGraph:Graphics=new Graphics();
@@ -55,17 +63,27 @@ export class Scene extends Container{
         myGraph.position.set(1280/2,720/2);
         this.addChild(myGraph);
 
-        //text
+       */ //text
 
-        const myText: Text= new Text("hello word",{fontSize: 150,fill:0xff0000, fontFamily:"Comic Sans MS"});
+        const myText: Text= new Text("hello word",{fontSize: 20,fill:0x00c000, fontFamily:"Comic Sans MS"});
         
-        myText.text="afdsfds"
-        myText.position.x=500;
-        myText.angle=75;
+        myText.text="¿Sólo una estrella y media?"
+        myText.position.x=610;
+        myText.position.y=130;
+   
         myText.scale.set(1);
+
+        const myText1: Text= new Text("hello word",{fontSize: 20,fill:0x00e000, fontFamily:"Comic Sans MS"});
+        myText1.text="¡Mira como te mira Loki..!"
+        myText1.position.x=615;
+        myText1.position.y=250;
+   
+        myText1.scale.set(1);
+
         this.addChild(myText);
+        this.addChild(myText1);
         
-        //nine slica plane*/
+        //nine slica plane
 
 
 
