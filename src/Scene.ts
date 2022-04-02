@@ -1,9 +1,9 @@
 import {  Container, Texture, NineSlicePlane,Text } from "pixi.js";
-import { Lokihat } from "./Lokihat";
-import { Estrellas } from "./Estrellas";
-import { Nivel } from "./Nivel";
-import { Puntos } from "./Puntos";
-import { Mandos } from "./Mandos";
+import { Lokihat } from "./Lokihat";  // imagen de loki con sombrero 
+import { Estrellas } from "./Estrellas"; // cantidad de estralla obtenidas
+import { Nivel } from "./Nivel"; // mensaje de estado de nivel
+import { Puntos } from "./Puntos"; // cantidad de puntos y objetivos obtiendos 
+import { Mandos } from "./Mandos";//  botones de control
 
 export class Scene extends Container{
 
